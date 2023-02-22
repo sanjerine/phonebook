@@ -9,6 +9,8 @@ morgan.token('content', function (req, res) {
 })
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :content'))
 
+app.use(express.static('build'))
+
 app.use(express.json())
 
 let persons = 
